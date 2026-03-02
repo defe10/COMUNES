@@ -40,6 +40,10 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 </head>
 
@@ -53,6 +57,7 @@
         <img src="images/logo_comunes_negro.png" alt="Fundación Comunes" height="60" class="brand-logo logo-dark mr-3">
         Fundación Comunes
       </a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
@@ -61,15 +66,26 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">Nosotros</a></li>
-          <li class="nav-item"><a href="causes.html" class="nav-link">Proyectos</a></li>
-          <li class="nav-item"><a href="causes.html" class="nav-link">Publicaciones</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarNosotros" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Nosotros
+            </a>
+
+            <!-- BS4: dropdown-menu suele ir como DIV -->
+            <div class="dropdown-menu" aria-labelledby="navbarNosotros">
+              <a class="dropdown-item" href="institucional.html">Institucional</a>
+              <a class="dropdown-item" href="equipo.html">Equipo</a>
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="proyectos.html" class="nav-link">Proyectos</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- END nav -->
 
   <div class="hero-wrap" style="background-image: url('images/bg_5.png');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
@@ -84,30 +100,6 @@
     </div>
   </div>
 
-
-  <section class="ftco-section">
-    <div class="container">
-      <div class="row d-flex">
-        <div class="col-md-6 d-flex ftco-animate">
-          <div class="img img-about align-self-stretch"
-            style="background-image: url(images/logo_comunes_negro.png); width: 80%;">
-          </div>
-        </div>
-        <div class="col-md-6 pl-md-5 ftco-animate">
-          <h2 class="mb-4">Bienvenidos a Fundación Comunes</h2>
-          <p>La Fundación Comunes es una organización sin fines de lucro con sede en la Provincia de Salta, Argentina.
-          </p>
-          <p>Desde 2021 trabajamos junto a comunidades campesinas e indígenas, organizaciones locales y actores
-            institucionales para promover el buen vivir desde una perspectiva de Derechos Humanos, Género e
-            Interculturalidad. Acompañamos procesos comunitarios que fortalecen el arraigo, la sostenibilidad y la
-            justicia territorial, incorporando la conservación de los recursos naturales, la flora y la fauna, como un
-            eje estratégico para el desarrollo social y comunitario.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="ftco-section bg-light">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-3">
@@ -121,123 +113,108 @@
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalMilana">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>María Paula Milana</h3>
               <p class="position">
                 Licenciada y Doctora en Antropología. Investigadora de CONICET.
               </p>
             </div>
-
           </div>
         </div>
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalDominguez">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>Karla Maythé Pérez Domínguez</h3>
               <p class="position">
-                Licenciada y Doctora en Antropología. Investigadora de CONICET.
+                Licenciada en Antropología, Máster en Investigación Social Ambiental y Doctora en Geografía.
               </p>
             </div>
-
           </div>
         </div>
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalManrique">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>Vanessa Bustamante Manrique</h3>
               <p class="position">
-                Licenciada y Doctora en Antropología. Investigadora de CONICET.
+                Bióloga. Doctoranda en Ciencias Biológicas y Conservación con énfasis en primates.
               </p>
             </div>
-
           </div>
         </div>
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalFormia">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>Martín Ezequiel Formía</h3>
               <p class="position">
-                Licenciada y Doctora en Antropología. Investigadora de CONICET.
+                Licenciado en Desarrollo Local-Regional.
               </p>
             </div>
-
           </div>
         </div>
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalGaspar">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>Graciela Mabel Gaspar</h3>
               <p class="position">
-                Licenciada y Doctora en Antropología. Investigadora de CONICET.
+                Artista textil en lana. Diplomada en Comunicación Indígena.
               </p>
             </div>
-
           </div>
         </div>
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalVazquez">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>Joaquín Vázquez</h3>
               <p class="position">
-                Licenciada y Doctora en Antropología. Investigadora de CONICET.
+                Faltan datos.
               </p>
             </div>
-
           </div>
         </div>
 
         <div class="col-lg-4 mb-sm-4 ftco-animate">
           <div class="staff">
-
             <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-
-            <a href="#" class="cv-link mt-3 d-inline-block" target="_blank">Ver CV</a>
-
+            <a href="#" class="cv-link mt-3 d-inline-block" data-bs-toggle="modal" data-bs-target="#cvModalAbeledo">
+              Ver CV
+            </a>
             <div class="info mt-3">
-              <h3><a href="teacher-single.html">María Paula Milana</a></h3>
+              <h3>Sebastián Humberto Abeledo</h3>
               <p class="position">
-                Licenciada y Doctora en Antropología. Investigadora de CONICET.
+                Faltan datos.
               </p>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -357,6 +334,163 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+  <!-- MODAL CV -->
+
+
+  <div class="modal fade" id="cvModalMilana" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">María Paula Milana</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Con más de diez años de experiencia en el trabajo colaborativo con organizaciones indígenas kollas de los
+            Valles interandinos de Salta, Argentina, incluyendo la formulación y ejecución de proyectos comunitarios.
+            Actualmente se desempeña como Investigadora de CONICET en la línea de las etnografías colaborativas y
+            comprometidas junto a mujeres indígenas. Finalizando la Especialidad en Peritajes Antropológicos y Maestría
+            en Derechos Humanos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cvModalDominguez" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Karla Maythé Pérez Domínguez</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Licenciada en Antropología, Máster en Investigación Social Ambiental y Doctora en Geografía, con más de diez
+            años de experiencia en procesos socioambientales rurales. Especializada en organización comunitaria, género
+            y gestión territorial, coordinando proyectos participativos en Argentina y México desde un enfoque
+            interdisciplinario que fortalece procesos locales y la gestión sostenible del territorio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cvModalManrique" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Vanessa Bustamante Manrique</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Bióloga, actualmente doctoranda en Ciencias Biológicas y Conservación con énfasis en primates, experta en
+            ecología y con experiencia en investigación bioacústica. Su trabajo aborda problemáticas socioambientales y
+            procesos de organización comunitaria orientados a la conservación de primates y de los territorios que
+            habitan, desde un enfoque interdisciplinario y participativo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cvModalFormia" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Martín Ezequiel Formía</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Licenciado en Desarrollo Local-Regional con experiencia en investigación-acción y análisis territorial junto
+            a comunidades rurales e indígenas. Especialista en SIG y cartografía social aplicados a proyectos
+            socio-territoriales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cvModalGaspar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Graciela Mabel Gaspar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Artista textil en lana, heredera de saberes andinos, campesina y creadora, con Diplomatura en Comunicación
+            Indígena. Forma parte de un emprendimiento familiar que mantiene arraigada la cultura ancestral y la
+            identidad del trabajo textil, sosteniendo una red integral de procesos que incluye la cría de llamas, el
+            esquilado, hilado y teñido con tintes naturales. Con conocimientos en turismo rural comunitario y gestión
+            sostenible de los recursos naturales, trabaja por la revalorización de las técnicas heredadas a través de
+            prendas de altura, distinguidas por su calidad, diseño y color.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cvModalVazquez" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Joaquín Vázquez</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Faltan datos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="cvModalAbeledo" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Sebastián Humberto Abeledo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+          <p>
+            Faltan datos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

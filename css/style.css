@@ -11448,6 +11448,120 @@ h5,
 
 
 
+.card-proyecto {
+  height: 300px;
+  /* alto fijo */
+}
+
+.imagen-overlay {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+/* el row y columnas ocupan todo el alto */
+.card-proyecto .row {
+  height: 100%;
+}
+
+.card-proyecto [class*="col-"] {
+  height: 100%;
+}
+
+/* armamos el body como columna */
+.card-proyecto .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* este bloque es el que se recorta */
+.card-proyecto .texto-recortado {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  /* toma el espacio disponible */
+}
+
+/* recorte por líneas */
+.card-proyecto .texto-recortado p {
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  /* líneas visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* fade abajo para que el corte sea lindo */
+.card-proyecto .texto-recortado::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+}
+
+
+
+/* link siempre abajo */
+.card-proyecto .ver-mas {
+  margin-top: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* estado expandido */
+.card-proyecto.expandida {
+  height: auto;
+  /* crece según contenido */
+}
+
+.card-proyecto.expandida .texto-recortado {
+  overflow: visible;
+}
+
+.card-proyecto.expandida .texto-recortado p {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  display: block;
+}
+
+.card-proyecto.expandida .texto-recortado::after {
+  display: none;
+}
+
+.card-text {
+  font-weight: 100 !important;
+  line-height: 1.4;
+}
+
+.proyecto-link {
+  display: inline-block;
+  /* clave */
+  width: auto;
+  /* evita que se estire */
+
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+
+  transition: all 0.3s ease;
+}
+
+.proyecto-link:hover {
+  color: #f86f2d;
+  border-color: #f86f2d;
+}
+
+
+
 .ftco-social a {
   width: 30px;
   height: 30px;
@@ -13244,5 +13358,52 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
+  }
+}
+
+/* =========================================================
+   FIX DROPDOWN BS4 (template ftco suele taparlo)
+   ========================================================= */
+
+/* Asegura que el dropdown no quede “cortado” por overflow del navbar/contendedor */
+#ftco-navbar,
+#ftco-navbar .container,
+#ftco-navbar .navbar-collapse {
+  overflow: visible !important;
+}
+
+/* Asegura que el menú quede arriba del hero/overlay */
+#ftco-navbar .dropdown-menu {
+  z-index: 2000;
+}
+
+/* =========================================================
+   BRAND: en móvil, al scrollear ocultar logos y dejar texto
+   (el template normalmente agrega clases scrolled/awake)
+   ========================================================= */
+
+.brand-text {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* ===== Dropdown OK dentro del navbar colapsado (BS4) ===== */
+@media (max-width: 991.98px) {
+
+  /* en mobile, el menú debe fluir dentro del collapse */
+  #ftco-navbar .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100%;
+    margin-top: 0.25rem;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    /* si querés fondo, cambiá esto */
+  }
+
+  #ftco-navbar .dropdown-item {
+    padding-left: 1.25rem;
+    /* indent bonito */
   }
 }
