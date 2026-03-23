@@ -13544,3 +13544,25 @@ textarea.form-control {
     margin-bottom: 1.5rem;
   }
 }
+
+/* =========================================================
+   Mobile navbar: keep contrast when menu opens after scroll
+   ========================================================= */
+@media (max-width: 991.98px) {
+  .ftco-navbar-light.scrolled #ftco-nav {
+    background: #000000;
+  }
+
+  .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:hover,
+  .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:focus {
+    color: #fff !important;
+  }
+
+  .ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > .nav-link {
+    color: #f86f2d !important;
+  }
+}
