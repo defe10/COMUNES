@@ -13407,27 +13407,10 @@ textarea.form-control {
     /* indent bonito */
   }
 
-  /* hace el navbar más estable en teléfonos reales */
-  #ftco-navbar {
-    position: sticky !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: 0 !important;
-    z-index: 1030;
-    background: #000 !important;
-  }
-
-  #ftco-navbar.scrolled,
-  #ftco-navbar.scrolled.awake,
-  #ftco-navbar.scrolled.sleep {
-    position: sticky !important;
-    top: 0;
-    margin-top: 0 !important;
-    background: #000 !important;
-  }
-
   #ftco-navbar .container {
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
@@ -13451,10 +13434,14 @@ textarea.form-control {
   #ftco-navbar .brand-text {
     display: block;
     min-width: 0;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: 1rem;
     line-height: 1.15;
     white-space: normal;
     color: #fff;
+  }
+
+  #ftco-navbar .brand-text-short {
+    display: none;
   }
 
   #ftco-navbar .navbar-toggler {
@@ -13463,17 +13450,45 @@ textarea.form-control {
     justify-content: flex-end;
     flex-shrink: 0;
     margin-left: auto;
-    padding: 0.5rem 0 0.5rem 0.75rem;
+    padding: 0.35rem 0 0.35rem 0.75rem;
+    min-width: 40px;
+  }
+
+  #ftco-navbar .navbar-toggler .oi {
+    font-size: 1.5rem;
+    line-height: 1;
   }
 
   #ftco-navbar .navbar-collapse {
     width: 100%;
+    flex-basis: 100%;
     padding-top: 0.75rem;
   }
 
   #ftco-navbar .navbar-nav > .nav-item > .nav-link {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #ftco-navbar .navbar-brand {
+    max-width: calc(100% - 52px);
+  }
+
+  #ftco-navbar .brand-logo {
+    height: 36px;
+    margin-right: 0.5rem !important;
+  }
+
+  #ftco-navbar .brand-text-full {
+    display: none;
+  }
+
+  #ftco-navbar .brand-text-short {
+    display: block;
+    font-size: 1.05rem;
+    line-height: 1.1;
   }
 }
 
