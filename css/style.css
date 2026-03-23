@@ -3052,7 +3052,7 @@ textarea.form-control {
     padding-top: 0.75rem;
   }
 
-  #ftco-navbar .navbar-nav > .nav-item > .nav-link {
+  #ftco-navbar .navbar-nav>.nav-item>.nav-link {
     padding-left: 0;
     padding-right: 0;
   }
@@ -3140,16 +3140,40 @@ textarea.form-control {
     background: #000000;
   }
 
-  .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+  .ftco-navbar-light.scrolled .navbar-nav>.nav-item>.nav-link {
     color: rgba(255, 255, 255, 0.8) !important;
   }
 
-  .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:hover,
-  .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link:focus {
+  .ftco-navbar-light.scrolled .navbar-nav>.nav-item>.nav-link:hover,
+  .ftco-navbar-light.scrolled .navbar-nav>.nav-item>.nav-link:focus {
     color: #fff !important;
   }
 
-  .ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > .nav-link {
+  .ftco-navbar-light.scrolled .navbar-nav>.nav-item.active>.nav-link {
     color: #f86f2d !important;
   }
+}
+
+@media (max-width: 767.98px) {
+
+  /* ocultar descripción */
+  .cause-entry .text p {
+    display: none;
+  }
+
+  /* opcional: ajustar espacios */
+  .cause-entry .text {
+    padding-bottom: 10px !important;
+  }
+
+  /* opcional: que el botón no quede muy abajo */
+  .cause-entry .proyecto-link {
+    margin-bottom: 0 !important;
+  }
+
+  .cause-entry .img {
+    display: block;
+    height: 150px;
+  }
+
 }
