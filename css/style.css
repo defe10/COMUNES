@@ -13406,6 +13406,75 @@ textarea.form-control {
     padding-left: 1.25rem;
     /* indent bonito */
   }
+
+  /* hace el navbar más estable en teléfonos reales */
+  #ftco-navbar {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0 !important;
+    z-index: 1030;
+    background: #000 !important;
+  }
+
+  #ftco-navbar.scrolled,
+  #ftco-navbar.scrolled.awake,
+  #ftco-navbar.scrolled.sleep {
+    position: sticky !important;
+    top: 0;
+    margin-top: 0 !important;
+    background: #000 !important;
+  }
+
+  #ftco-navbar .container {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  #ftco-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    max-width: calc(100% - 84px);
+    margin-right: 0.75rem;
+    white-space: normal;
+  }
+
+  #ftco-navbar .brand-logo {
+    display: inline-block;
+    flex-shrink: 0;
+    height: 42px;
+    margin-right: 0.75rem !important;
+  }
+
+  #ftco-navbar .brand-text {
+    display: block;
+    min-width: 0;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.15;
+    white-space: normal;
+    color: #fff;
+  }
+
+  #ftco-navbar .navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0.5rem 0 0.5rem 0.75rem;
+  }
+
+  #ftco-navbar .navbar-collapse {
+    width: 100%;
+    padding-top: 0.75rem;
+  }
+
+  #ftco-navbar .navbar-nav > .nav-item > .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .about-author[data-toggle="modal"] {
