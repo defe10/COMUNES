@@ -388,14 +388,14 @@ h5,
 }
 
 .hero-social .social-icon {
-  color: #faaa3a;
+  color: #fff;
   font-size: 22px;
   margin: 0 12px;
   transition: all 0.3s ease;
 }
 
 .hero-social .social-icon:hover {
-  color: #fff;
+  color: #f86f2d;
   /* tu naranja institucional */
   transform: translateY(-3px);
 }
@@ -950,6 +950,16 @@ h5,
    Layout centrado (foto arriba)
    ========================= */
 
+.comision {
+  background-color: #f3f3f3;
+  padding: 25px;
+}
+
+.resto {
+  padding: 25px;
+}
+
+
 .staff {
   padding: 25px;
   background: #fff;
@@ -981,6 +991,22 @@ h5,
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.staff .img2 {
+  width: 100px;
+  /* ajustá a gusto: 120-170 suele quedar bien */
+  height: 100px;
+  margin: 0 auto;
+  /* centra el círculo dentro del cuadro */
+  border: 4px solid #f0f0f0;
+  border-radius: 50%;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 
 /* Link "Ver CV" centrado y prolijo */
 .staff .cv-link {
@@ -1025,6 +1051,7 @@ h5,
   font-size: 14px;
   margin-bottom: 0;
   color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
 }
 
 /* Por si el template usa .text */
@@ -2090,7 +2117,7 @@ textarea.form-control {
 .block-23 ul li>a {
   display: table;
   line-height: 1.5;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .block-23 ul li span {
